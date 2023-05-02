@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="shortcut icon" href="{% static 'register/log.png' %}" type="image/x-icon">  -->
+  <title>Smart Codecademy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Oswald&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="{% static 'register/styles.css' %}">
+</head>
+<body>
+  <div class="login-box">
+    <div class="logo">
+      <img src="{% static 'register/logo.png' %}" alt="Smart Codecademy">
+    </div>
+    <h2>REGISTRATION</h2>
+    <form method="POST" action="">
+      {% csrf_token %}
+      <div class="user-box">
+        <input type="text" name="fname" required>
+        <label>First Name</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="lname" required>
+        <label>Last Name</label>
+      </div>
+      <label for="Gender">
+        <input type="radio" name="gender" value="male" checked> Male
+        <input type="radio" name="gender" value="female"> Female
+      </label>
+      <br>
+      <br>
+      <div class="user-box">
+        <input type="number" name="num" required="">
+        <label>Whatsapp</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="location" required="">
+        <label>Location</label>
+      </div>
+      <div class="user-box">
+        <input type="email" name="email" required="">
+        <label>Email id</label>
+      </div>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <input type="submit" value="Submit">
+      </a>
+    </form>
+  </div>
+</body>
+</html>
