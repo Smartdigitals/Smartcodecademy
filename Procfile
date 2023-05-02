@@ -1,1 +1,1 @@
-web gunicorn smartcodecademy.wsgi:application --log-file -
+web gunicorn smartcodereg.wsgi:application --log-file -
